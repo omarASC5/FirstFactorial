@@ -1,33 +1,14 @@
 function FirstFactorial(num) { 
 
   // code goes here  
-  let count = num;
-  while (count > 0) {
-      count = count - 1;
-      num += (num * count);
+  if (num == 0) {
+      return 1;
+  } else {
+     num *= FirstFactorial(num - 1);
   }
   return num; 
          
 }
    
 // keep this function call here 
-FirstFactorial(readline());                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            
-                            
-                            
-  
+FirstFactorial(readline());
